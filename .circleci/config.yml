@@ -15,4 +15,6 @@ jobs:
       - run:
           name: Build
           command: docker build -t $OWNER/$IMAGE_NAME:latest .
-
+      - run:
+          name: Docker Login
+          command: echo "$DOCKER_PASSWORD" | docker login -u $DOCKER_USER --password-stdin
