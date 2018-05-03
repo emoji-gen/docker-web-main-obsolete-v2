@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch-slim
+      - image: docker:17.11.0-ce
     working_directory: ~/workspace
     environment:
       OWNER: emojigen
