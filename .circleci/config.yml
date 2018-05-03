@@ -3,12 +3,16 @@ jobs:
   build:
     docker:
       - image: debian:stretch-slim
-    working_directory: /go/src/github.com/project/repo
+    working_directory: ~/workspace
+    environment:
+      OWNER: emojigen
+      IMAGE_NAME: docker-web-main
     steps:
       - setup_remote_docker:
           version: 17.11.0-ce
           docker_layer_caching: true
       - checkout
       - run:
-          name: Test
-          command: echo $DOCKER_USERNAME
+          name: Build
+          command: docker build -t $OWNER/$IMAGE_NAME:latest .
+
