@@ -22,7 +22,6 @@ RUN set -ex \
   && /usr/local/python/bin/pip3 install wheel --upgrade \
   \
   && rm -rf /usr/local/xbuild \
-  && apt-get -qq purge -y curl \
   && apt-get -qq autoremove -y \
   && apt-get -qq clean \
   && rm -rf ~/.cache/pip/ \
