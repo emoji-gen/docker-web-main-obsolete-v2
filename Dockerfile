@@ -26,3 +26,5 @@ RUN set -ex \
   && apt-get -qq clean \
   && rm -rf ~/.cache/pip/ \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+
+CMD ["/bin/bash"]
