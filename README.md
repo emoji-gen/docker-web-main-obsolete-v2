@@ -6,7 +6,7 @@
 ## Build
 
 ```
-$ docker build -t docker-web-main .
+$ docker build -t emoji-gen/docker-web-main .
 ```
 
 ## License
